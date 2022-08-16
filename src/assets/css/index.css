@@ -1,0 +1,46 @@
+/*                {{{ 
+    |\        /|  {
+    | \      / |  {
+    |  \    /  | {{
+    |   \  /   |{{{ 
+    |    \/    | {{
+ _  |          |  {
+|_| |          |  {
+                  {{{                  
+*/
+
+/* default styles */
+html{scroll-behavior: smooth;}
+*{box-sizing: border-box;}
+body,header,main,footer,section,div{width:100%; height:auto;}
+body,h1,h2,h3,h4,h5,h6,p,section,div{margin:0 ; padding:0;}
+button,input,select{outline:none; cursor: pointer;}
+a{cursor: pointer; text-decoration: none; color: inherit;}
+ul,li{margin:0; padding:0; list-style: none;}
+input[type=number]::-webkit-inner-spin-button {-webkit-appearance: none;}
+
+/* messenger styles */
+.m-scrollbar-y::-webkit-scrollbar {width: 5px;}
+.m-scrollbar-y::-webkit-scrollbar-track{background-color: transparent;}
+.m-scrollbar-y::-webkit-scrollbar-thumb{background-color: #dddfe2; border-radius: 5px;}
+.m-scrollbar-y::-webkit-scrollbar-thumb:hover{background-color: #b7b9ba;}
+
+:root{
+  --secondary: hsl(0, 0%, 86%);
+  --primary: #157ce1;
+  --success:hsl(141, 53%, 53%);
+  --w: #fff;
+  --b: #000;
+}
+
+/*
+}}}
+  }
+  }
+  }}
+  }}}
+  }}
+  }
+  }
+}}}  
+*/
