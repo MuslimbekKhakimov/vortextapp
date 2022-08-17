@@ -19,16 +19,34 @@ a{cursor: pointer; text-decoration: none; color: inherit;}
 ul,li{margin:0; padding:0; list-style: none;}
 input[type=number]::-webkit-inner-spin-button {-webkit-appearance: none;}
 
+/* fonts */
+@font-face {
+  font-family: 'roboto-regular';
+  font-style: normal;
+  src: url("@/assets/fonts/Roboto-Regular.ttf");
+  font-display: swap;
+}
+
 /* messenger styles */
-.m-scrollbar-y::-webkit-scrollbar {width: 5px;}
-.m-scrollbar-y::-webkit-scrollbar-track{background-color: transparent;}
-.m-scrollbar-y::-webkit-scrollbar-thumb{background-color: #dddfe2; border-radius: 5px;}
-.m-scrollbar-y::-webkit-scrollbar-thumb:hover{background-color: #b7b9ba;}
+.scrollbar-y::-webkit-scrollbar {width: 5px;}
+.scrollbar-y::-webkit-scrollbar-track{background-color: transparent;}
+.scrollbar-y::-webkit-scrollbar-thumb{background-color: #dddfe2; border-radius: 5px;}
+.scrollbar-y::-webkit-scrollbar-thumb:hover{background-color: #b7b9ba;}
+
+#app{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 
 :root{
-  --secondary: hsl(0, 0%, 86%);
+  --secondary: hsl(0, 2%, 82%);
   --primary: #157ce1;
   --success:hsl(141, 53%, 53%);
+  --success-dark:#0ac630;
+  --effective:#f4f4f5;
   --w: #fff;
   --b: #000;
 }

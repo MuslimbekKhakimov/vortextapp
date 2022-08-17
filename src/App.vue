@@ -1,10 +1,14 @@
 <template>
-
+  <WholePage></WholePage>
 </template>
 
 <script>
+import WholePage from "@/components/views/WholePage.vue"
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    WholePage
+  }
 }
 </script>
 
