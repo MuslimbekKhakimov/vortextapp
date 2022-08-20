@@ -2,22 +2,34 @@
     <div class="top-menu-scrollable">
         <div class="top-menu-items">
             <effective class="top-menu-item" duration="0.5s">
-                <p>all</p>
+                <p>
+                    <span>all</span>
+                    <badge class="top-menu-badge">99999</badge>
+                </p>
             </effective>
         </div>
         <div class="top-menu-items">
             <effective class="top-menu-item" duration="0.5s">
-                <p>users</p>
+                <p>
+                    <span>users</span>
+                    <badge class="top-menu-badge">99999</badge>
+                </p>
             </effective>
         </div>
         <div class="top-menu-items">
             <effective class="top-menu-item" duration="0.5s">
-                <p>messages</p>
+                <p>
+                    <span>messages</span>
+                    <badge class="top-menu-badge">1</badge>
+                </p>
             </effective>
         </div>
         <div class="top-menu-items">
             <effective class="top-menu-item" duration="0.5s">
-                <p>groups</p>
+                <p>
+                    <span>users</span>
+                    <badge class="top-menu-badge">99999</badge>
+                </p>
             </effective>
         </div>
         <div class="top-menu-items">
@@ -161,5 +173,8 @@ export default {
     }
     .tab-to:hover{
         background-color: #eff6fe !important;
+    }
+    .top-menu-badge{
+        margin-left: 7px;
     }
 </style>
