@@ -10,7 +10,6 @@ export default {
 </script>
 <style>
     .badge{
-        background-color: var(--primary);
         color: var(--w);
         border-radius: 100px;
         font-size: 17px;

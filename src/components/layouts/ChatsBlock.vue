@@ -6,26 +6,67 @@
         <div class="top-menu-horizontal-block">
             <TopMenuHorizantal></TopMenuHorizantal>
         </div>
+        <div class="chat-users-block scrollbar-y">
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+            <UserPeer></UserPeer>
+        </div>
     </div>
 </template>
 <script>
 import SearchInputGroup from '@/components/ui/SearchInputGroup.vue'
 import TopMenuHorizantal from '@/components/ui/TopMenuHorizantal.vue'
+import UserPeer from "@/components/ui/UserPeer.vue"
 export default {
     name: "ChatsBlock",
     components: {
         SearchInputGroup,
-        TopMenuHorizantal
+        TopMenuHorizantal,
+        UserPeer
     }
 }
 </script>
 <style>
     .chats-block{
         height: 100%;
-        /* background-color: red; */
         max-width: 430px;
-        display: flex;
-        flex-direction: column;
     }
     .search-block{
         background-color: var(--w);
@@ -34,6 +75,10 @@ export default {
     .top-menu-horizontal-block{
         border-bottom: 1px solid var(--borders);
         overflow: hidden;
-        /* background-color: purple; */
+    }
+    .chat-users-block{
+        overflow-y: scroll;
+        height: calc(100vh - 103px);
+        padding: 5px 0px 5px 5px;
     }
 </style>

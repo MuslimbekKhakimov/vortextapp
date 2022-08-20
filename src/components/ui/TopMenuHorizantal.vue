@@ -176,5 +176,6 @@ export default {
     }
     .top-menu-badge{
         margin-left: 7px;
+        background-color: var(--primary);
     }
 </style>
