@@ -22,14 +22,18 @@ export default {
 <style>
     .chats-block{
         height: 100%;
-        background-color: red;
+        /* background-color: red; */
         max-width: 430px;
-        width: 430px;
         display: flex;
         flex-direction: column;
     }
     .search-block{
         background-color: var(--w);
-        padding: 3px 15px;
+        padding: 7px 15px 3px 15px;
+    }
+    .top-menu-horizontal-block{
+        border-bottom: 1px solid var(--borders);
+        overflow: hidden;
+        /* background-color: purple; */
     }
 </style>

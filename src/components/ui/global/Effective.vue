@@ -19,8 +19,8 @@ export default {
             effective.appendChild(ripple);     
             var d = Math.max(effective.clientWidth, effective.clientHeight);
             ripple.style.width = ripple.style.height = d + 'px';
-            ripple.style.left = event.clientX - effective.offsetLeft - d / 2 + 'px';
-            ripple.style.top = event.clientY - effective.offsetTop - d / 2 + 'px'; 
+            ripple.style.left = event.clientX - effective.getBoundingClientRect().left - d / 2 + 'px';
+            ripple.style.top = event.clientY - effective.getBoundingClientRect().top - d / 2 + 'px'; 
             ripple.style.animationDuration = this.duration;
             ripple.classList.add('ripple');    
         }
@@ -41,12 +41,15 @@ export default {
     }
     .ripple{
         border-radius: 50%;
-        background-color: rgba(0, 0, 0, 0.17);
+        background-color: rgba(0, 0, 0, 0.12);
         position: absolute;
         transform: scale(0);
         opacity: 1;
         animation-name: ripple;
         animation-timing-function: ease-in;
+    }
+    .ripple-tab-to{
+        background-color: #318ae333 !important;
     }
     @keyframes ripple{
         to{
