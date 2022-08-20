@@ -63,8 +63,8 @@ export default {
 }
 
 .search-icon img {
-    width: 100%;
-    height: auto;
+    width: 22px;
+    height: 22px;
 }
 
 .search-input {
