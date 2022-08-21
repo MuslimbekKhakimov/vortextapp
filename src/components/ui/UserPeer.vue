@@ -174,11 +174,13 @@ export default {
 }
 .chat-list-last-message{
     font-family: roboto-regular;
-    font-size: 15px;
-    color:gray;
 }
 .chat-list-last-message span{
     color: var(--b);
     font-size: 16px;
+}
+.chat-list-last-message a{
+    font-size: 15px;
+    color:gray;
 }
 </style>
