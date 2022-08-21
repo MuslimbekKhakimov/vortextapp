@@ -14,3 +14,7 @@ npm run serve
 ```
 npm run build
 ```
+### Netlify 
+```
+[netlify](https://https://messenger-uz.netlify.app/)
+```
