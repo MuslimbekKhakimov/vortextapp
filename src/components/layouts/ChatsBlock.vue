@@ -47,6 +47,7 @@
             <UserPeer></UserPeer>
             <UserPeer></UserPeer>
             <UserPeer></UserPeer>
+            p
         </div>
     </div>
 </template>
@@ -67,6 +68,8 @@ export default {
     .chats-block{
         height: 100%;
         max-width: 430px;
+        /* display: flex;
+        flex-direction: column; */
     }
     .search-block{
         background-color: var(--w);
@@ -78,7 +81,7 @@ export default {
     }
     .chat-users-block{
         overflow-y: scroll;
-        height: calc(100vh - 103px);
+        max-height: calc(100% - 103px);
         padding: 5px 0px 5px 5px;
     }
 </style>
