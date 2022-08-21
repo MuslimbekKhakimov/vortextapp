@@ -16,5 +16,5 @@ npm run build
 ```
 ### Netlify 
 ```
-https://https://messenger-uz.netlify.app/
+https://messenger-uz.netlify.app/
 ```
