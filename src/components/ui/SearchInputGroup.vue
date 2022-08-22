@@ -160,20 +160,19 @@ export default {
     -webkit-backdrop-filter: blur(5px);
     top:55px;
     left:15px;
-    z-index: -1;
+    z-index: 1;
     box-shadow: 0px 0px 10px rgba(0,0,0,.15);
     border-radius: 10px;
     visibility: hidden;
-    transform: scale(.9);
+    transform: scale(.8) translateY(10%);
     opacity: 0;
     transition: opacity .2s var(--bar-btn-menu),
                 transform .2s var(--bar-btn-menu),
                 visibility .2s var(--bar-btn-menu);
 }
 .bar_btn_menu_activate{
-    z-index: 1;
     visibility: visible;
-    transform: scale(1);
+    transform: scale(1) translateY(0%);
     opacity: 1;
 }
 /* vue transitions */
