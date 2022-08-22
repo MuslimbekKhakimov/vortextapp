@@ -5,7 +5,20 @@
 </template>
 <script>
 export default {
-    name: "MessagesBlock"
+    name: "MessagesBlock",
+    data() {
+        return {
+            testing:false
+        }
+    },
+    methods: {
+        test(event){
+            console.log("focus")
+        },
+        focusout(event){
+            console.log("focus out")
+        }
+    }
 }
 </script>
 <style>

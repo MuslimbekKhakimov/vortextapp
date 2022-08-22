@@ -41,10 +41,8 @@
                         <div class="chat-list-user">
                             <div class="chat-list-user-title chat-list-last-message">
                                 <p>
-                                    <span style="color: var(--b); font-size: 16px;">Djon:</span>
-                                    <span>
-                                        Hi Abdukarim ! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est repellat, eum assumenda sequi consectetur obcaecati? Atque, recusandae dolor temporibus fuga facere, deserunt maxime cumque rem quasi, libero rerum amet sit.
-                                    </span>
+                                    <span>Djon:</span>
+                                    Hi Abdukarim ! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est repellat, eum assumenda sequi consectetur obcaecati? Atque, recusandae dolor temporibus fuga facere, deserunt maxime cumque rem quasi, libero rerum amet sit.
                                 </p>
                             </div>
                             <div class="chat-list-user-title-right-items">
@@ -176,5 +174,9 @@ export default {
     font-family: roboto-regular;
     font-size: 15px;
     color:gray;
+}
+.chat-list-last-message span{
+    color: var(--b);
+    font-size: 16px;
 }
 </style>

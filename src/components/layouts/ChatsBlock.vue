@@ -68,8 +68,6 @@ export default {
     .chats-block{
         height: 100%;
         max-width: 430px;
-        /* display: flex;
-        flex-direction: column; */
     }
     .search-block{
         background-color: var(--w);
