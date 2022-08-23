@@ -83,7 +83,7 @@ export default {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 8px 9px;
+    padding: 9px 10px;
     display: flex;
     align-items: center;
     user-select: none;

@@ -1,24 +1,26 @@
 <template>
     <div class="messages-block">
-        2
+        
     </div>
 </template>
 <script>
+import Switch from '../ui/global/Switch.vue';
 export default {
     name: "MessagesBlock",
     data() {
         return {
-            testing:false
-        }
+            testing: false
+        };
     },
     methods: {
-        test(event){
-            console.log("focus")
+        test(event) {
+            console.log("focus");
         },
-        focusout(event){
-            console.log("focus out")
+        focusout(event) {
+            console.log("focus out");
         }
-    }
+    },
+    components: { Switch }
 }
 </script>
 <style>

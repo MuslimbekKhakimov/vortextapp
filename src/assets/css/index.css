@@ -54,6 +54,8 @@ input[type=number]::-webkit-inner-spin-button {-webkit-appearance: none;}
   --success:hsl(141, 53%, 53%);
   --success-dark:#0ac630;
   --secondary: hsl(0, 2%, 82%);
+  --secondary-hover:hsl(0, 0%, 94%);
+  --secondary-dark:#c4c9cc;
   --borders:#dfe1e5;
   --effective:#f4f4f5;
   --w: #fff;
