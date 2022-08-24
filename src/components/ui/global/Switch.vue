@@ -37,7 +37,7 @@ export default {
         transition: all .3s;
     }
     .custom_switch_activate::before{
-        transform: translateX(70%);
+        transform: translateX(69%);
         border: 2px solid var(--primary);
     }
     .custom_switch_activate{

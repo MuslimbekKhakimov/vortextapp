@@ -18,63 +18,30 @@
                 <div class="bar-btn-menu-list">
                     <ul>
                         <li class="bar-menu-lis-item">
-                            <div class="bar-menu-item-icon">
-                                ic 
-                            </div>
-                            <div class="bar-menu-item-text">
-                                saved messages
-                            </div>
+                            saved messages
                         </li>
                         <li class="bar-menu-lis-item">
-                            <div class="bar-menu-item-icon">
-                                ic 
-                            </div>
-                            <div class="bar-menu-item-text">
-                                contacts
-                            </div>
-                        </li>
-                        <li class="bar-menu-lis-item" @click="darkMode = !darkMode">
-                            <div class="bar-menu-item-icon">
-                                ic 
-                            </div>
-                            <div class="bar-menu-item-text">
-                                dark mode
-                            </div>
-                            <div class="bar-menu-item-switch">
-                                <Switch :action="darkMode"></Switch>
-                            </div>
-                        </li>
-                        <li class="bar-menu-lis-item"  @click="animations = !animations">
-                            <div class="bar-menu-item-icon">
-                                ic 
-                            </div>
-                            <div class="bar-menu-item-text">
-                                animations
-                            </div>
-                            <div class="bar-menu-item-switch">
-                                <Switch :action="animations"></Switch>
-                            </div>
+                            contacts
                         </li>
                         <li class="bar-menu-lis-item">
-                            <div class="bar-menu-item-icon">
-                                ic 
-                            </div>
-                            <div class="bar-menu-item-text">
-                                telegram features
-                            </div>
+                            dark mode
+                            <Switch action=""></Switch>
                         </li>
                         <li class="bar-menu-lis-item">
-                            <div class="bar-menu-item-icon">
-                                ic 
-                            </div>
-                            <div class="bar-menu-item-text">
-                                report bug
-                            </div>  
+                            animations
+                            <Switch action=""></Switch>
                         </li>
                         <li class="bar-menu-lis-item">
-                            <div class="bar-menu-item-text">
-                                telegram version 1.0
-                            </div>  
+                            telegram features
+                        </li>
+                        <li class="bar-menu-lis-item">
+                            report bug 
+                        </li>
+                        <li class="bar-menu-lis-item">
+                            android version
+                        </li>
+                        <li class="bar-menu-lis-item">
+                            telegram version 1.0
                         </li>
                     </ul>
                 </div>
@@ -98,8 +65,6 @@
     </div>
 </template>
 <script>
-import Switch from './global/Switch.vue'
-
 export default {
     name: "SearchInputGroup",
     data() {
@@ -107,8 +72,6 @@ export default {
             search: false,
             searchLeftIcon: false,
             barBtnMenu: false,
-            darkMode:false,
-            animations:false
         };
     },
     methods: {
@@ -123,8 +86,7 @@ export default {
             this.searchLeftIcon = false;
             this.search = false;
         }
-    },
-    components: { Switch }
+    }
 }
 </script>
 <style>
@@ -266,9 +228,4 @@ export default {
     background-color: var(--secondary-hover);
 }
 
-.bar-menu-item-icon,.bar-menu-item-text,.bar-menu-item-switch{
-    width: auto;
-    height: auto;
-}
-/* vue transitions */
 </style>
