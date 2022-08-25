@@ -8,7 +8,10 @@ export default {
   name: 'App',
   components: {
     WholePage
-  }
+  },
+  created() {
+    document.title = "messenger"
+  },
 }
 </script>
 
