@@ -17,30 +17,90 @@
             <div class="bar-btn-menu" :class="{ bar_btn_menu_activate: barBtnMenu }">
                 <div class="bar-btn-menu-list">
                     <ul>
-                        <li class="bar-menu-lis-item">
-                            saved messages
+                        <li class="bar-menu-list-item">
+                            <div class="bar-menu-item-text-icon">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.75 16.25H14.25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 13.713C2 8.082 2.64052 8.475 6.08825 5.41C7.5967 4.246 9.94388 2 11.9708 2C13.9967 2 16.3908 4.235 17.9128 5.41C21.3605 8.475 22 8.082 22 13.713C22 22 19.9564 22 12 22C4.04361 22 2 22 2 13.713Z" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div>saved messages</div>
+                            </div>
                         </li>
-                        <li class="bar-menu-lis-item">
-                            contacts
+                        <li class="bar-menu-list-item">
+                            <div class="bar-menu-item-text-icon">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.75 16.25H14.25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 13.713C2 8.082 2.64052 8.475 6.08825 5.41C7.5967 4.246 9.94388 2 11.9708 2C13.9967 2 16.3908 4.235 17.9128 5.41C21.3605 8.475 22 8.082 22 13.713C22 22 19.9564 22 12 22C4.04361 22 2 22 2 13.713Z" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div>contacts</div>
+                            </div>
                         </li>
-                        <li class="bar-menu-lis-item">
-                            dark mode
-                            <Switch action=""></Switch>
+                        <li class="bar-menu-list-item" @click="darkMode = !darkMode">
+                            <div class="bar-menu-item-text-icon">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.75 16.25H14.25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 13.713C2 8.082 2.64052 8.475 6.08825 5.41C7.5967 4.246 9.94388 2 11.9708 2C13.9967 2 16.3908 4.235 17.9128 5.41C21.3605 8.475 22 8.082 22 13.713C22 22 19.9564 22 12 22C4.04361 22 2 22 2 13.713Z" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div>dark mode</div>
+                            </div>
+                            <div class="bar-menu-item-switch">
+                                <Switch :action="darkMode"></Switch>
+                            </div>
                         </li>
-                        <li class="bar-menu-lis-item">
-                            animations
-                            <Switch action=""></Switch>
+                        <li class="bar-menu-list-item" @click="animations = !animations">
+                            <div class="bar-menu-item-text-icon">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.75 16.25H14.25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 13.713C2 8.082 2.64052 8.475 6.08825 5.41C7.5967 4.246 9.94388 2 11.9708 2C13.9967 2 16.3908 4.235 17.9128 5.41C21.3605 8.475 22 8.082 22 13.713C22 22 19.9564 22 12 22C4.04361 22 2 22 2 13.713Z" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div>animations</div>
+                            </div>
+                            <div class="bar-menu-item-switch">
+                                <Switch :action="animations"></Switch>
+                            </div>
                         </li>
-                        <li class="bar-menu-lis-item">
-                            telegram features
+                        <li class="bar-menu-list-item">
+                            <div class="bar-menu-item-text-icon">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.75 16.25H14.25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 13.713C2 8.082 2.64052 8.475 6.08825 5.41C7.5967 4.246 9.94388 2 11.9708 2C13.9967 2 16.3908 4.235 17.9128 5.41C21.3605 8.475 22 8.082 22 13.713C22 22 19.9564 22 12 22C4.04361 22 2 22 2 13.713Z" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div>telegram features</div>
+                            </div>
                         </li>
-                        <li class="bar-menu-lis-item">
-                            report bug 
+                        <li class="bar-menu-list-item">
+                            <div class="bar-menu-item-text-icon">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.75 16.25H14.25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 13.713C2 8.082 2.64052 8.475 6.08825 5.41C7.5967 4.246 9.94388 2 11.9708 2C13.9967 2 16.3908 4.235 17.9128 5.41C21.3605 8.475 22 8.082 22 13.713C22 22 19.9564 22 12 22C4.04361 22 2 22 2 13.713Z" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div>report bug</div>
+                            </div>
                         </li>
-                        <li class="bar-menu-lis-item">
-                            android version
+                        <li class="bar-menu-list-item">
+                            <div class="bar-menu-item-text-icon">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.75 16.25H14.25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 13.713C2 8.082 2.64052 8.475 6.08825 5.41C7.5967 4.246 9.94388 2 11.9708 2C13.9967 2 16.3908 4.235 17.9128 5.41C21.3605 8.475 22 8.082 22 13.713C22 22 19.9564 22 12 22C4.04361 22 2 22 2 13.713Z" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div>android version</div>
+                            </div>
                         </li>
-                        <li class="bar-menu-lis-item">
+                        <li class="bar-menu-list-item">
                             telegram version 1.0
                         </li>
                     </ul>
@@ -72,6 +132,8 @@ export default {
             search: false,
             searchLeftIcon: false,
             barBtnMenu: false,
+            darkMode:false,
+            animations:true
         };
     },
     methods: {
@@ -191,6 +253,8 @@ export default {
     transition: opacity .3s var(--bar-btn-menu),
         transform .3s var(--bar-btn-menu),
         visibility .3s var(--bar-btn-menu);
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .bar_btn_menu_activate {
@@ -215,17 +279,55 @@ export default {
     }
 }
 
-.bar-btn-menu-list ul .bar-menu-lis-item {
+.bar-btn-menu-list ul .bar-menu-list-item {
     font-family: roboto-medium;
     font-size: 17px;
     padding: 7px 15px 8.5px 15px;
     border-radius: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.bar-btn-menu-list ul .bar-menu-lis-item:hover {
+.bar-btn-menu-list ul .bar-menu-list-item:hover {
     background-color: var(--secondary-hover);
 }
 
+.bar-btn-menu-list ul .bar-menu-list-item span {
+    border: none;
+}
+
+.bar-menu-item-text-icon,
+.bar-menu-item-switch {
+    width: auto;
+}
+
+.bar-menu-item-switch .custom-switch {
+    transform: translateY(2px);
+}
+
+.bar-btn-menu-list ul .bar-menu-list-item:last-child {
+    display: inherit;
+    text-align: center;
+    color: gray;
+    font-size: 15px;
+    font-family: roboto-regular;
+}
+.bar-btn-menu-list ul .bar-menu-list-item:last-child:hover{
+    background-color: transparent;
+}
+.bar-menu-item-text-icon{
+    display: flex;
+    align-items: center;
+}
+.bar-menu-item-text-icon div{
+    width: auto;
+}
+.bar-menu-item-text-icon div:first-child{
+    padding-right: 10px;
+}
+.bar-menu-item-text-icon svg{
+    fill: transparent;
+    transform: translateY(2px);
+}
 </style>
