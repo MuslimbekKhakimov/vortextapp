@@ -381,6 +381,6 @@ export default {
 
 .bar-menu-item-text-icon svg {
     fill: transparent;
-    transform: translateY(2px);
+    transform: translateY(3px);
 }
 </style>

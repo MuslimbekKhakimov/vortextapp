@@ -11,7 +11,7 @@
         <div class="top-menu-items">
             <effective class="top-menu-item" duration="0.5s">
                 <p>
-                    <span>users</span>
+                    <span>foydalanuvchilar</span>
                     <badge class="top-menu-badge">99999</badge>
                 </p>
             </effective>
