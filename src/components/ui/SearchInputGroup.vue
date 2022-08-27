@@ -173,6 +173,7 @@
     </div>
 </template>
 <script>
+import { mapMutations } from 'vuex';
 export default {
     name: "SearchInputGroup",
     data() {
@@ -185,9 +186,11 @@ export default {
         };
     },
     methods: {
+        ...mapMutations(['searchChanger']),
         searchFocus(event) {
             this.searchLeftIcon = true;
             this.search = true;
+            this.searchChanger(true)
         },
         searchFocusOut(event) {
             this.search = false;
@@ -195,6 +198,7 @@ export default {
         searchExit(event) {
             this.searchLeftIcon = false;
             this.search = false;
+            this.searchChanger(false)
         }
     }
 }

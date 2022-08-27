@@ -9,4 +9,5 @@ globalui.forEach( ui =>{
     app.component(ui.name, ui)
 })
 
-app.use(store).mount('#app')
+app.use(store)
+app.mount('#app')

@@ -1,19 +1,10 @@
 import { createStore } from 'vuex'
+import leftSide from './modules/leftSide'
+import rightSide from './modules/rightSide'
 
 export default createStore({
-  state: {
-    leftSide:{
-      actions:{
-        search:false
-      }
-    }
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    leftSide,
+    rightSide
   }
 })

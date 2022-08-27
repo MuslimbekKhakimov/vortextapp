@@ -1,75 +1,11 @@
 <template>
     <div class="top-menu-scrollable">
-        <div class="top-menu-items">
+        <div class="top-menu-items" v-for="(menuitem, index) in menuItems" :key="index">
             <effective class="top-menu-item" duration="0.5s">
                 <p>
-                    <span>all</span>
-                    <badge class="top-menu-badge">99999</badge>
+                    <span>{{menuitem.name}}</span>
+                    <badge class="top-menu-badge">{{index + 1}}</badge>
                 </p>
-            </effective>
-        </div>
-        <div class="top-menu-items">
-            <effective class="top-menu-item" duration="0.5s">
-                <p>
-                    <span>users</span>
-                    <badge class="top-menu-badge">99999</badge>
-                </p>
-            </effective>
-        </div>
-        <div class="top-menu-items">
-            <effective class="top-menu-item" duration="0.5s">
-                <p>
-                    <span>messages</span>
-                    <badge class="top-menu-badge">1</badge>
-                </p>
-            </effective>
-        </div>
-        <div class="top-menu-items">
-            <effective class="top-menu-item" duration="0.5s">
-                <p>
-                    <span>users</span>
-                    <badge class="top-menu-badge">99999</badge>
-                </p>
-            </effective>
-        </div>
-        <div class="top-menu-items">
-            <effective class="top-menu-item" duration="0.5s">
-                <p>channels</p>
-            </effective>
-        </div>
-        <div class="top-menu-items">
-            <effective class="top-menu-item" duration="0.5s">
-                <p>bots</p>
-            </effective>
-        </div>
-        <div class="top-menu-items">
-            <effective class="top-menu-item" duration="0.5s">
-                <p>all</p>
-            </effective>
-        </div>
-        <div class="top-menu-items">
-            <effective class="top-menu-item" duration="0.5s">
-                <p>users</p>
-            </effective>
-        </div>
-        <div class="top-menu-items">
-            <effective class="top-menu-item" duration="0.5s">
-                <p>messages</p>
-            </effective>
-        </div>
-        <div class="top-menu-items">
-            <effective class="top-menu-item" duration="0.5s">
-                <p>groups</p>
-            </effective>
-        </div>
-        <div class="top-menu-items">
-            <effective class="top-menu-item" duration="0.5s">
-                <p>channels</p>
-            </effective>
-        </div>
-        <div class="top-menu-items">
-            <effective class="top-menu-item" duration="0.5s">
-                <p>bots</p>
             </effective>
         </div>
         <div class="top-menu-tab-line"></div>
@@ -78,6 +14,9 @@
 <script>
 export default {
     name: "TopMenuHorizantal",
+    props:{
+        menuItems:Object
+    },
     mounted() {
         this.tab()
     },
@@ -119,6 +58,7 @@ export default {
             })
         }
     },
+
 }
 </script>
 <style>
@@ -178,4 +118,14 @@ export default {
         margin-left: 7px;
         background-color: var(--primary);
     }
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+
+}
 </style>
