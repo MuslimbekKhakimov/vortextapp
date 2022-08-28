@@ -81,18 +81,12 @@ export default {
     .top-menu-scrollable::-webkit-scrollbar{
         display: none;
     }
-    .top-menu-items{
-        width: auto;
-    }
     .top-menu-items:first-child{
         margin-left: 10px;
     }
     .top-menu-items{
+         width: auto;
          -webkit-touch-callout: none; 
-         -webkit-user-select: none; 
-         -khtml-user-select: none; 
-         -moz-user-select: none; 
-         -ms-user-select: none; 
          user-select: none;
     }
     .top-menu-item{

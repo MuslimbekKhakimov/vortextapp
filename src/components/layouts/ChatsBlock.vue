@@ -15,6 +15,12 @@
                 :class="{search_activate:searchState}"
             ></TopMenuHorizantal>
         </div>
+        <div class="search-chat-users-block"
+            v-if="searchState"
+            :class="{search_activate:searchState}"
+        >
+            <SearchUsersPeer></SearchUsersPeer>
+        </div>
         <div class="chat-users-block scrollbar-y"
              v-if="!searchState"
             :class="{search_deactivate:!searchState}">
@@ -27,6 +33,7 @@ import { mapMutations, mapState, mapGetters } from 'vuex'
 import SearchInputGroup from '@/components/ui/SearchInputGroup.vue'
 import TopMenuHorizantal from '@/components/ui/TopMenuHorizantal.vue'
 import UserPeer from "@/components/ui/UserPeer.vue"
+import SearchUsersPeer from "@/components/ui/SearchUsersPeer.vue"
 export default {
     name: "ChatsBlock",
     beforeMount() {
@@ -43,7 +50,8 @@ export default {
     components: {
         SearchInputGroup,
         TopMenuHorizantal,
-        UserPeer
+        UserPeer,
+        SearchUsersPeer
     }
 }
 </script>
