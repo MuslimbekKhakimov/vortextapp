@@ -7,55 +7,18 @@
             <TopMenuHorizantal 
                 :menuItems="menuItems" 
                 v-if="!searchState"
+                :class="{search_deactivate:!searchState}"
             ></TopMenuHorizantal>
-            <Transition name="search-activate">
-                <TopMenuHorizantal 
-                        :menuItems="menuSearchItems" 
-                        v-if="searchState"
-                ></TopMenuHorizantal>
-            </Transition>
+            <TopMenuHorizantal 
+                :menuItems="menuSearchItems" 
+                v-if="searchState"
+                :class="{search_activate:searchState}"
+            ></TopMenuHorizantal>
         </div>
-        <div class="chat-users-block scrollbar-y">
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
-            <UserPeer></UserPeer>
+        <div class="chat-users-block scrollbar-y"
+             v-if="!searchState"
+            :class="{search_deactivate:!searchState}">
+            <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,7,8,5,4,5,6,9,7,8,9,8,7,8,9]"></UserPeer>
         </div>
     </div>
 </template>
@@ -106,13 +69,35 @@ export default {
     padding: 5px 0px 5px 5px;
 }
 
-.search-activate-enter-active{
-    transition: transform .1s cubic-bezier(.4, 0, .2, 1);
+.search_activate {
+    transform-origin: center;
+    animation: search_activate .15s ease-in-out;
 }
-.search-activate-enter-from{
-    transform: scale(1.1);
+@keyframes search_activate{
+    from{
+        transform: scale(1.2) translateY(-30%);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1) translateY(0%);
+        opacity: 1;
+    }
 }
-.search-activate-enter-to{
-    transform: scale(1);
+
+.search_deactivate{
+    transform-origin: center;
+    animation: search_deactivate .15s ease-in-out;
 }
+
+@keyframes search_deactivate{
+    from{
+        transform: scale(.8) translateY(30%);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1) translateY(0%);
+        opacity: 1;
+    }
+}
+
 </style>

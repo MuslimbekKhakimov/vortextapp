@@ -12,6 +12,7 @@
     </div>
 </template>
 <script>
+import { mapState } from 'vuex';
 export default {
     name: "TopMenuHorizantal",
     props:{
@@ -51,14 +52,21 @@ export default {
                     }
                     this.classList.add("tab-to")
                     this.querySelector(".ripple").classList.add("ripple-tab-to")
-                    setTimeout(()=>{
+                    if(this.animations){
+                        setTimeout(()=>{
+                            scrollable.scrollLeft = calcLeftofScrollable
+                        },500)
+                    }
+                    else{
                         scrollable.scrollLeft = calcLeftofScrollable
-                    },500)
+                    }
                 })
             })
         }
     },
-
+    computed:{
+        ...mapState({animations:state=> state.leftSide.items.StorageItems.animation})
+    }
 }
 </script>
 <style>

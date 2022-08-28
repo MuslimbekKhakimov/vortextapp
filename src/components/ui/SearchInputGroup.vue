@@ -79,7 +79,7 @@
                                 <Switch :action="darkMode"></Switch>
                             </div>
                         </li>
-                        <li class="bar-menu-list-item" @click="animations = !animations">
+                        <li class="bar-menu-list-item" @click="animationControl(!animations)">
                             <div class="bar-menu-item-text-icon">
                                 <div>
                                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
@@ -173,7 +173,7 @@
     </div>
 </template>
 <script>
-import { mapMutations } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 export default {
     name: "SearchInputGroup",
     data() {
@@ -182,11 +182,11 @@ export default {
             searchLeftIcon: false,
             barBtnMenu: false,
             darkMode: false,
-            animations: true
+
         };
     },
     methods: {
-        ...mapMutations(['searchChanger']),
+        ...mapMutations(['searchChanger', 'animationControl']),
         searchFocus(event) {
             this.searchLeftIcon = true;
             this.search = true;
@@ -199,7 +199,10 @@ export default {
             this.searchLeftIcon = false;
             this.search = false;
             this.searchChanger(false)
-        }
+        },
+    },
+    computed:{
+        ...mapState({animations: state => state.leftSide.items.StorageItems.animations})
     }
 }
 </script>
