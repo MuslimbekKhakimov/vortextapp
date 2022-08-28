@@ -149,7 +149,7 @@
                             </div>
                         </li>
                         <li class="bar-menu-list-item">
-                            telegram version 1.0
+                            telegram version 0.1.0
                         </li>
                     </ul>
                 </div>
