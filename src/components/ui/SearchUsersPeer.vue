@@ -157,6 +157,8 @@ export default {
     flex-direction: row;
     padding: 4px 0px 0px 0px;
     border-bottom: 1px solid var(--borders);
+    -webkit-touch-callout: none; 
+    user-select: none;
 }
 
 .search-users-scrollable::-webkit-scrollbar {
