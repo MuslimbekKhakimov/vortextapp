@@ -3,6 +3,7 @@
         <div class="search-block">
             <SearchInputGroup></SearchInputGroup>
         </div>
+
         <div class="top-menu-horizontal-block">
             <TopMenuHorizantal 
                 :menuItems="menuItems" 
@@ -15,17 +16,43 @@
                 :class="{search_activate:searchState}"
             ></TopMenuHorizantal>
         </div>
-        <div class="search-chat-users-block"
-            v-if="searchState"
-            :class="{search_activate:searchState}"
-        >
-            <SearchUsersPeer></SearchUsersPeer>
+
+        <div class="chat-tab-folder-items-block">
+
+            <div class="chat-folder-chat-items"
+                v-if="!searchState"
+                :class="{search_deactivate:!searchState}"
+                >
+                <div class="tab-chat-items tab-folder-items scrollbar-y">
+                    <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,5,7,8,5,6,3,6,6]" ></UserPeer>
+                </div>
+                <div class="tab-chat-items tab-folder-items scrollbar-y" >
+                    <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,5,7,8,5,6,3,6,6]" ></UserPeer>
+                </div>
+                <div class="tab-chat-items tab-folder-items scrollbar-y">
+                    p
+                    <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,5,7,8,5,6,3,6,6]"></UserPeer>
+                    p
+                </div>
+            </div>
+
+            <div class="chat-folders-search-items"
+                v-if="searchState"
+                :class="{search_activate:searchState}"
+                >
+                <div class="tab-folder-items">
+                    <SearchUsersPeer></SearchUsersPeer>
+                </div>
+                <div class="tab-folder-items">
+                    <SearchUsersPeer></SearchUsersPeer>
+                </div>
+                <div class="tab-folder-items">
+                    <SearchUsersPeer></SearchUsersPeer>
+                </div>
+            </div>
+
         </div>
-        <div class="chat-users-block scrollbar-y"
-             v-if="!searchState"
-            :class="{search_deactivate:!searchState}">
-            <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,7,8,5,4,5,6,9,7,8,9,8,7,8,9]"></UserPeer>
-        </div>
+
     </div>
 </template>
 <script>
@@ -71,16 +98,30 @@ export default {
     overflow: hidden;
 }
 
-.chat-users-block {
-    overflow-y: scroll;
+.chat-tab-folder-items-block{
+    overflow: hidden;
+    height: calc(100% - 103px);
     max-height: calc(100% - 103px);
-    padding: 5px 0px 5px 5px;
+}
+
+.chat-folder-chat-items,.chat-folders-search-items{
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tab-chat-items{
+    min-width: 100%;
+    overflow-y: scroll;
+    height: 100%;
+    padding: 7px 2px 7px 7px;
 }
 
 .search_activate {
     transform-origin: center;
     animation: search_activate .15s ease-in-out;
 }
+
 @keyframes search_activate{
     from{
         transform: scale(1.2) translateY(-30%);
