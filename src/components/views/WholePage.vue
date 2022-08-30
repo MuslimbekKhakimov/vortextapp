@@ -12,7 +12,10 @@ export default {
     components: {
         ChatsBlock,
         MessagesBlock
-    }
+    },
+    mounted() {
+        console.log("on WholePage.vue page tab functions")
+    },
 }
 </script>
 <style>

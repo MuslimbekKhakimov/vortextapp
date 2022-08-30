@@ -24,10 +24,10 @@
                 :class="{search_deactivate:!searchState}"
                 >
                 <div class="tab-chat-items tab-folder-items scrollbar-y">
-                    <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,5,7,8,5,6,3,6,6]" ></UserPeer>
+                    <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,5,7,8,5,6,3,6,6]"></UserPeer>
                 </div>
-                <div class="tab-chat-items tab-folder-items scrollbar-y" >
-                    <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,5,7,8,5,6,3,6,6]" ></UserPeer>
+                <div class="tab-chat-items tab-folder-items scrollbar-y">
+                    <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,5,7,8,5,6,3,6,6]"></UserPeer>
                 </div>
                 <div class="tab-chat-items tab-folder-items scrollbar-y">
                     p
@@ -111,10 +111,13 @@ export default {
 }
 
 .tab-chat-items{
-    min-width: 100%;
     overflow-y: scroll;
     height: 100%;
     padding: 7px 2px 7px 7px;
+}
+
+.tab-folder-items{
+    min-width: 100%;
 }
 
 .search_activate {

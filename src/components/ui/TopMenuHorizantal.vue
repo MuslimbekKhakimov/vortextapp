@@ -33,7 +33,7 @@ export default {
                 transform:translateX(${initialcalcTablineLeft}px);
             `
             topMenuItems[0].classList.add("tab-to")
-            topMenuItems.forEach((e) => {
+            topMenuItems.forEach((e, index) => {
                 e.addEventListener("click", function () {
                     let calcLeftofScrollable = this.offsetLeft - (scrollable.clientWidth / 2) + (this.offsetWidth / 2)
                     let calcTablineLeft = this.offsetLeft + ((this.offsetWidth - this.querySelector("p").offsetWidth) / 2) - 4;
@@ -52,12 +52,7 @@ export default {
                     }
                     this.classList.add("tab-to")
                     this.querySelector(".ripple").classList.add("ripple-tab-to")
-                    // if(this.animations){
-
-                    // }
-                    // else{
-                    //     scrollable.scrollLeft = calcLeftofScrollable
-                    // }
+                    console.log(index)
                     setTimeout(() => {
                         scrollable.scrollLeft = calcLeftofScrollable
                     }, 500)
