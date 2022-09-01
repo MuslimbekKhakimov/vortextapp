@@ -14,39 +14,39 @@ export default {
         ChatsBlock,
         MessagesBlock
     },
-    watch:{
-        scrollMenuClickIndex(then, old){
+    watch: {
+        scrollMenuClickIndex(then, old) {
             let tabFolders = document.querySelectorAll(".tab-folder-items")
-            if(tabFolders){
-                tabFolders.forEach((e, index)=>{
+            if (tabFolders) {
+                tabFolders.forEach((e, index) => {
                     e.classList.remove("tab-folder-activate-left")
                     e.classList.remove("tab-folder-activate-right")
                     e.classList.remove("tab-folder-activate-orders")
                     e.classList.remove("tab-folder-activate-left-back")
                     e.classList.remove("tab-folder-activate-right-back")
-                    if(index === then){
+                    if (index === then) {
                         e.style = ""
                     }
-                    else if(index === old){
+                    else if (index === old) {
                         e.style = ""
                     }
-                    else{
+                    else {
                         e.classList.add("tab-folder-activate-orders")
                     }
                 })
-                if(then > old){
+                if (then > old) {
                     tabFolders[old].classList.add("tab-folder-activate-left")
                     tabFolders[then].classList.add("tab-folder-activate-right")
                 }
-                else{
+                else {
                     tabFolders[old].classList.add("tab-folder-activate-left-back")
                     tabFolders[then].classList.add("tab-folder-activate-right-back")
                 }
-            }   
+            }
         }
     },
-    computed:{
-        ...mapState({scrollMenuClickIndex: state => state.leftSide.items.scollMenuClickIndex})
+    computed: {
+        ...mapState({ scrollMenuClickIndex: state => state.leftSide.items.scollMenuClickIndex })
     }
 }
 </script>
@@ -59,60 +59,64 @@ export default {
 }
 
 
-.tab-folder-activate-orders{
+.tab-folder-activate-orders {
     display: none;
 }
 
-.tab-folder-activate-right{
-    animation:tab-folder-activate-right .5s ease-out forwards;
+.tab-folder-activate-right {
+    animation: tab-folder-activate-right .5s ease-out forwards;
 }
 
-.tab-folder-activate-left{
-    animation:tab-folder-activate-left .5s ease-out forwards;
-}   
+.tab-folder-activate-left {
+    animation: tab-folder-activate-left .5s ease-out forwards;
+}
 
 
-@keyframes tab-folder-activate-left{
+@keyframes tab-folder-activate-left {
     from {
         transform: translateX(0%);
     }
-    to{
+
+    to {
         transform: translateX(-100%);
     }
 }
 
 
-@keyframes tab-folder-activate-right{
+@keyframes tab-folder-activate-right {
     from {
         transform: translateX(0%);
     }
-    to{
+
+    to {
         transform: translateX(-100%);
     }
 }
 
-.tab-folder-activate-right-back{
+.tab-folder-activate-right-back {
     animation: tab-folder-activate-right-back .5s ease-out forwards;
 }
 
-.tab-folder-activate-left-back{
+.tab-folder-activate-left-back {
     animation: tab-folder-activate-left-back .5s ease-out forwards;
 }
 
-@keyframes tab-folder-activate-right-back{
+@keyframes tab-folder-activate-right-back {
     from {
         transform: translateX(-100%);
     }
-    to{
+
+    to {
         transform: translateX(0%);
     }
 }
 
-@keyframes tab-folder-activate-left-back{
+@keyframes tab-folder-activate-left-back {
     from {
         transform: translateX(-100%);
     }
-    to{
+
+    to {
         transform: translateX(0%);
     }
 }
