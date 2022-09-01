@@ -4,7 +4,7 @@
     </div>
 </template>
 <script>
-import SearchUserPeer from "@/components/ui/SearchUserPeer.vue"
+import SearchUserPeer from "@/components/ui/SearchResultUserPeer.vue"
 export default {
     name: "SearchUsersPeer",
     components:{
