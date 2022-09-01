@@ -3,11 +3,12 @@ export default {
         items:{
             search:false,
             topMenuItemsEmpty:[],
-            topMenuItems:[{name:"all"},{name:"users"},{name:"messages"},{name:"channels"},{name:"bots"},{name:"all"},{name:"users"},{name:"messages"},{name:"channels"},{name:"bots"}],
+            topMenuItems:[{name:"all"},{name:"users"},{name:"messages"},{name:"groups"},{name:"channels"},{name:"bots"}],
             topMenuSearchItems:[{name:"chats"},{name:"medias"},{name:"links"},{name:"files"},{name:"musics"},{name:"voices"}],
             StorageItems:{
                 animations:true
-            }
+            },
+            scollMenuClickIndex:0,
         }
     },
     getters: {
@@ -16,6 +17,9 @@ export default {
         },
         getTopMenuSearchItems(state){
             return state.items.topMenuSearchItems
+        },
+        getScollMenuClickIndex(state){
+            return state.items.scollMenuClickIndex
         }
     },  
     mutations: {
@@ -35,6 +39,9 @@ export default {
         animationControl(state, animation){
             state.items.StorageItems.animations = animation
             localStorage.setItem("leftSide", JSON.stringify(state.items.StorageItems))
+        },
+        setScollMenuClickIndex(state, index){
+            state.items.scollMenuClickIndex = index
         }
     },
     actions: {

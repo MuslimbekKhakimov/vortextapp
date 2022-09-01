@@ -186,11 +186,12 @@ export default {
         };
     },
     methods: {
-        ...mapMutations(['searchChanger', 'animationControl']),
+        ...mapMutations(['searchChanger', 'animationControl', 'setScollMenuClickIndex']),
         searchFocus(event) {
             this.searchLeftIcon = true;
             this.search = true;
             this.searchChanger(true)
+            this.setScollMenuClickIndex(0)
         },
         searchFocusOut(event) {
             this.search = false;
@@ -199,6 +200,7 @@ export default {
             this.searchLeftIcon = false;
             this.search = false;
             this.searchChanger(false)
+            this.setScollMenuClickIndex(0)
         },
     },
     computed:{

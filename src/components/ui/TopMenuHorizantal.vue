@@ -12,7 +12,7 @@
     </div>
 </template>
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 export default {
     name: "TopMenuHorizantal",
     props: {
@@ -22,7 +22,9 @@ export default {
         this.tab()
     },
     methods: {
+        ...mapMutations(['setScollMenuClickIndex']),
         tab() {
+            let setIndex = this.setScollMenuClickIndex
             let topMenuItems = document.querySelectorAll(".top-menu-item");
             let scrollable = document.querySelector(".top-menu-scrollable");
             let tabline = document.querySelector(".top-menu-tab-line");
@@ -52,14 +54,14 @@ export default {
                     }
                     this.classList.add("tab-to")
                     this.querySelector(".ripple").classList.add("ripple-tab-to")
-                    console.log(index)
+                    setIndex(index)
                     setTimeout(() => {
                         scrollable.scrollLeft = calcLeftofScrollable
                     }, 500)
                 })
             })
         }
-    },
+    },  
     computed: {
         ...mapState({ animations: state => state.leftSide.items.StorageItems.animations })
     }

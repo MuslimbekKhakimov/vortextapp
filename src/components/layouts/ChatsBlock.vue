@@ -23,16 +23,10 @@
                 v-if="!searchState"
                 :class="{search_deactivate:!searchState}"
                 >
-                <div class="tab-chat-items tab-folder-items scrollbar-y">
+                <div class="tab-chat-items tab-folder-items scrollbar-y" 
+                    v-for="test in tests">
+                    <h1 style="text-align:center;"> test {{test.name}}</h1>
                     <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,5,7,8,5,6,3,6,6]"></UserPeer>
-                </div>
-                <div class="tab-chat-items tab-folder-items scrollbar-y">
-                    <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,5,7,8,5,6,3,6,6]"></UserPeer>
-                </div>
-                <div class="tab-chat-items tab-folder-items scrollbar-y">
-                    p
-                    <UserPeer v-for="user in [1,2,3,4,5,6,7,8,9,5,7,8,5,6,3,6,6]"></UserPeer>
-                    p
                 </div>
             </div>
 
@@ -40,13 +34,8 @@
                 v-if="searchState"
                 :class="{search_activate:searchState}"
                 >
-                <div class="tab-folder-items">
-                    <SearchUsersPeer></SearchUsersPeer>
-                </div>
-                <div class="tab-folder-items">
-                    <SearchUsersPeer></SearchUsersPeer>
-                </div>
-                <div class="tab-folder-items">
+                <div class="tab-folder-items" v-for="test in tests2">
+                    <h1 style="text-align:center;"> test {{test.name}}</h1>
                     <SearchUsersPeer></SearchUsersPeer>
                 </div>
             </div>
@@ -63,6 +52,19 @@ import UserPeer from "@/components/ui/UserPeer.vue"
 import SearchUsersPeer from "@/components/ui/SearchUsersPeer.vue"
 export default {
     name: "ChatsBlock",
+    data() {
+        return {
+            tests:[
+                {name:"all", filter:"all"},
+                {name:"users", filter:"users"},
+                {name:"messages", filter:"messages"},
+                {name:"groups", filter:"groups"},
+                {name:"channels", filter:"channels"},
+                {name:"bots", filter:"bots"},
+            ],
+            tests2:[{name:"chats"},{name:"medias"},{name:"links"},{name:"files"},{name:"musics"},{name:"voices"}],
+        }
+    },
     beforeMount() {
         this.initialLeftSide()
     },
@@ -122,33 +124,60 @@ export default {
 
 .search_activate {
     transform-origin: center;
-    animation: search_activate .15s ease-in-out;
+    animation: search_activate .1s ease-in-out;
 }
 
 @keyframes search_activate{
     from{
-        transform: scale(1.2) translateY(-30%);
+        transform: scale(1.1) translate3d(0px, -30px, 0px);
         opacity: 0;
     }
     to{
-        transform: scale(1) translateY(0%);
+        transform: scale(1) translate3d(0px, 0px, 0px);
         opacity: 1;
     }
 }
 
 .search_deactivate{
     transform-origin: center;
-    animation: search_deactivate .15s ease-in-out;
+    animation: search_deactivate .1s ease-in-out;
 }
 
 @keyframes search_deactivate{
     from{
-        transform: scale(.8) translateY(30%);
+        transform:scale(.9) translate3d(0px, 30px, 0px);
         opacity: 0;
     }
     to{
-        transform: scale(1) translateY(0%);
+        transform:scale(1)  translate3d(0px, 0px, 0px);
         opacity: 1;
+    }
+}
+
+.tab-folder-activate-v-enter-active,
+.tab-folder-activate-v-leave-active {
+  transition: transform .5s ease-in-out;
+}
+
+.tab-folder-activate-v-enter-from{
+    transform: translateX(0%);
+}
+.tab-folder-activate-v-leave-to {
+    transform: translateX(-100%);
+}
+
+.tab-folder-activate{
+    animation: tab-folder-activate;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes tab-folder-activate{
+    from {
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
     }
 }
 
