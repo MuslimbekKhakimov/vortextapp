@@ -55,9 +55,7 @@ export default {
                     this.classList.add("tab-to")
                     this.querySelector(".ripple").classList.add("ripple-tab-to")
                     setIndex(index)
-                    setTimeout(() => {
-                        scrollable.scrollLeft = calcLeftofScrollable
-                    }, 500)
+                    scrollable.scrollLeft = calcLeftofScrollable
                 })
             })
         }
